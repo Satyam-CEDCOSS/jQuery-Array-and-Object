@@ -73,7 +73,11 @@ table, td, th{
 	border-collapse: collapse;
 	padding: 10px;
 }
-
+.footer__table button{
+	font-size: 20px;
+	padding: 10px;
+	margin: 10px;
+}
 
 /*
  * Home Page

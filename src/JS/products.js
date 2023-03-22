@@ -28,7 +28,7 @@ function display() {
       arr[i].value
     }<button class="minus" id="${cnt}">-</button></td><td>$${sum}</td><td><button class="delete" id="${cnt++}">Delete</button></td></tr>`;
   }
-  tab_foot = `<tr><td></td><td></td><td>${total_product}</td><td>$${total_money}</td><td><button id="clear">Empty Cart</button></td></tr>`;
+  tab_foot = `<tr><td></td><td></td><td>Total Product: ${total_product}</td><td>$${total_money}</td><td><button id="clear">Empty Cart</button></td></tr>`;
   $("#table_body").html(word);
   $("#table_foot").html(tab_foot);
   if (arr.length == 0) {
@@ -57,7 +57,7 @@ $(document).ready(function () {
 // Plus Button Function 
 $(document).on("click", ".plus", function () {
   let plus_id = $(this).attr("id");
-  const found2 = arr.find((element) => element.id == plus_id);
+  const found2 = arr.find((element) => element.id == arr[plus_id].id);
   found2.value += 1;
   display();
 });
@@ -65,7 +65,7 @@ $(document).on("click", ".plus", function () {
 // Minus Button Function 
 $(document).on("click", ".minus", function () {
   let minus_id = $(this).attr("id");
-  const found3 = arr.find((element) => element.id == minus_id);
+  const found3 = arr.find((element) => element.id == arr[minus_id].id);
   if (found3.value > 1) {
     found3.value -= 1;
   } else {
