@@ -60,6 +60,20 @@ body{
 	width: 40%;
 	margin: 0 auto;
 }
+.footer__box h1{
+	text-align: center;
+}
+.footer__table table{
+	margin-top: 10px;
+	font-size: 20px;
+	width: 99%;
+}
+table, td, th{
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 10px;
+}
+
 
 /*
  * Home Page
