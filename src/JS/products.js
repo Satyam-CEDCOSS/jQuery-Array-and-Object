@@ -1,5 +1,5 @@
 // Main Data 
-var products = [
+let products = [
   { id: 101, name: "Football", image: "football.png", price: 150 },
   { id: 102, name: "Tennis", image: "tennis.png", price: 120 },
   { id: 103, name: "Basket Ball", image: "basketball.png", price: 90 },
@@ -16,6 +16,8 @@ function display() {
   let cnt = 0;
   let total_money = 0;
   let total_product = 0;
+  // Here 2 array is traversing with the single loop
+  // hence foreach is not possible
   for (let i = 0; i < arr.length; i++) {
     let sum = arr[i].value * products[arr[i].id].price;
     total_money += sum;
